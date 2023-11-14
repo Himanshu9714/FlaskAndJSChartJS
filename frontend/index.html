@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyitcs</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        #countryChart {
+            width: 60% !important;
+            height: 800px !important;
+        }
+
+        .charts {
+            margin: 2%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="charts">
+        <label for="yearSelector1">Select start year:</label>
+        <select id="yearSelector1">
+            <option value="--">--</option>
+        </select>
+
+        <label for="yearSelector2">Select end year:</label>
+        <select id="yearSelector2">
+            <option value="--">--</option>
+        </select>
+
+        <label for="groupby">Group:</label>
+        <select id="groupby">
+            <option value="--">--</option>
+            <option value="country">Country</option>
+            <option value="region">Region</option>
+            <option value="sector">Sector</option>
+            <option value="source">Source</option>
+            <option value="topic">Topic</option>
+        </select>
+
+        <button onclick="showChart()">Apply</button>
+
+        <canvas id="myChart" width="800" height="400"></canvas>
+        <canvas id="countryChart"></canvas>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="populateYears.js"></script>
+    <script src="populateYears.js"></script>
+    <script src="visualize.js"></script>
+</body>
+
+</html>
